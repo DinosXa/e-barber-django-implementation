@@ -1,0 +1,24 @@
+{% extends "barbershop/base.html" %}
+{% block content %}
+<div class="container">
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Barbershop</th>
+        <th>Booked Time</th>
+        <th>Service</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+        <td>You Booked:</td>
+        <td>{{Bookings.barbershop}}</td>
+        <td>{{Bookings.time}}</td>
+        <td>{{Bookings.status}}</td>
+
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

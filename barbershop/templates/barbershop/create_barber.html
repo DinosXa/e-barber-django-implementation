@@ -1,0 +1,16 @@
+{% extends "barbershop/base.html" %}
+
+{% block content %}
+<article class="media content-section">
+  <div class="media-body">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <input class="btn btn-success" type="Submit" name="Book Barbershop">
+    {% for message in messages %}
+      <p id="messages">{{ message }}</p>
+
+    {% endfor %}
+   </div>
+  </article>
+{% endblock content %}

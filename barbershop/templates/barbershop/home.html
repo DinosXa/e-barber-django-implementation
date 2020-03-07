@@ -1,0 +1,17 @@
+{% extends "barbershop/base.html" %}
+{% block content %}
+    {% for i in barbershops %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ i.area }}</a>
+              <small class="text-muted">{{ i.phone }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ i.Barbershopname }}</a></h2>
+            <p class="article-content">{{ i.service }}</p>
+            <a href="{% url 'create_book' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Book Now</a>
+            <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Post a Review</a>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
